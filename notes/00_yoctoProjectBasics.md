@@ -10,3 +10,6 @@
 > 4. Include file (.inc): Recipe include file
 > 5. Configuration (.conf): System, layer, machine configuration file
 > Layer: Collection of metadata
+
+### How to setup your yocto build project?
+> 1. clone poky: git:/git.yoctoproject.org/poky 

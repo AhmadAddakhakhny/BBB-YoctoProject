@@ -60,3 +60,25 @@
 
 ### How to build a minimal image?
 > bitbake core-image-minimal
+
+### How to check the packages the should be installed for your image?
+> run $ bitbake -g core_image_minimal
+
+### How to enable ssh?
+> IMAGE_FEATURES:append " ssh-server-dropbear "
+### How to enable UART consol?
+> SERIAL_CONSOLES = "115200;ttyO0" (already defined in meta-ti-bsp)
+
+### What are the options to change the variables of local.conf?
+> 1. change it in the same file  
+> 2. change it in your own layer
+
+### List deploying steps of the BBB using wic tool?
+> 1. go to: /BBB-YoctoProject/poky/build/deploy-ti/images/beaglebone/
+> 2. de-compress core-image-minimal-beaglebone.wic.xz
+> $ unxz core-image-minimal-beaglebone.wic.xz
+> 3. partition your SD-Card and flash it with the .wic file
+> sudo dd if=core-image-minimal-beaglebone.wic of=/dev/sdc status=progress bs=4096 && sync
+> 4. plug the DS-Card to your BBB and boot it up
+> 5. username = root, password = "NO PASSWARD REQUIRED"
+> Remark: wic is a tool provided by Yocto Project, dd is a core utility tool

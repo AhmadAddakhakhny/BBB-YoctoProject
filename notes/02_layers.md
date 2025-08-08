@@ -1,7 +1,7 @@
 ### Q1. Why Layers?
 > The layer concept in Yocto is crucial for maintaining a clean, customizable, and scalable embedded Linux build system. By using layers, you can manage complexity, share configurations, and ensure that your system is flexible for multiple hardware platforms and software packages.
 
-### How to know the layers direcories?
+### Q2. How to know the layers direcories?
 > the start with meta* prefix
 
 ### what is the purpose of Append to recipes files .bblayer

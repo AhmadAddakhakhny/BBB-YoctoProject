@@ -1,4 +1,4 @@
-### Why Layers?
+### Q1. Why Layers?
 > The layer concept in Yocto is crucial for maintaining a clean, customizable, and scalable embedded Linux build system. By using layers, you can manage complexity, share configurations, and ensure that your system is flexible for multiple hardware platforms and software packages.
 
 ### How to know the layers direcories?

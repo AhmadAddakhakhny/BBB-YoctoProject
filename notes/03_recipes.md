@@ -106,3 +106,36 @@ do_install () {
     install -m 755 ${S}/helloyp ${D}${bindir}/
 }
 ```
+
+## Recipes for GNU Make
+### Write a recipe for a GNU Make application?
+```bash
+
+```
+
+### Whe to use RDEPENDS / runtime dependancy variable?
+> Use RDEPENDS in Yocto recipes when you need to ensure that other packages or services are available for the application to function properly at runtime. This makes dependency management more efficient and reduces the risk of runtime failures due to missing dependencies.
+
+### Whe to use DEPENDS / compile dependancy variable?
+> tools, libraries needed to build the software
+
+### How to run a make command inside the do_compile task?
+> $ oe_runmake    ==> To ensure a well proper env to run make
+
+### When can you ignore writing do_install taks?
+> if it's already implemented in the Makefile.
+
+### what is the variable STAGING_DIR_TARGET?
+> It points to the package recipe-sysroot directory for target build, i.e. arm machine.
+
+### what is the variable STAGING_DIR_HOST?
+> It points to the package recipe-sysroot directory for host/native build, i.e. x86 machine.
+
+## Basic Recipes for CMake
+### Is CMake supported by Yocto?
+> yes, its class definition located in the meta layer cmake.bbclass  
+> it provides many tasks, so no need to define all taks yourself, only you should inherit them.
+
+### How to inherit a class?
+> run $ inherit <ClassName>
+> example: $ inherit cmake
